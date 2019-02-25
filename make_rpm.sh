@@ -21,12 +21,9 @@ wget http://archive.apache.org/dist/tomcat/tomcat-8/v$VERSION/bin/apache-tomcat-
 tar -xzpf apache-tomcat-$VERSION.tar.gz
 cp marlin/marlin*.jar apache-tomcat-$VERSION/lib
 cp java-libs apache-tomcat-$VERSION/conf
-mv apache-tomcat-$VERSION.tar.gz apache-tomcat-$VERSION.tar.gz.old
 cd apache-tomcat-$VERSION/webapps/manager/
-jar -cvf manager.war *
 cd -
 tar -czpf apache-tomcat-$VERSION.tar.gz apache-tomcat-$VERSION
-
 ln -v -s "$(pwd)/apache-tomcat-$VERSION.tar.gz" "rpmbuild/SOURCES/"
 ln -v -s "$(pwd)/tomcat8."{init,logrotate,sysconfig,bin,conf} "rpmbuild/SOURCES/"
 ln -v -s "$(pwd)/tomcat8.spec" "rpmbuild/SPECS/"
