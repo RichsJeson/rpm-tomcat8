@@ -41,7 +41,7 @@ This package contains the tomcat manager webapp.
 %install
 # Add webapp
 install -d -m 775 %{buildroot}%{tomcat_user_home}/webapps
-mv webapps/manager/manager.war %{buildroot}%{tomcat_user_home}/webapps
+# mv webapps/manager/manager.war %{buildroot}%{tomcat_user_home}/webapps
 chmod 775 %{buildroot}/%{tomcat_user_home}/webapps/*
 
 %clean
