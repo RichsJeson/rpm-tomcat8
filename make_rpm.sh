@@ -21,7 +21,6 @@ wget http://archive.apache.org/dist/tomcat/tomcat-8/v$VERSION/bin/apache-tomcat-
 tar -xzpf apache-tomcat-$VERSION.tar.gz
 cp marlin/marlin*.jar apache-tomcat-$VERSION/lib
 cp java-libs apache-tomcat-$VERSION/conf
-cd apache-tomcat-$VERSION/webapps/manager/
 cd -
 tar -czpf apache-tomcat-$VERSION.tar.gz apache-tomcat-$VERSION
 ln -v -s "$(pwd)/apache-tomcat-$VERSION.tar.gz" "rpmbuild/SOURCES/"
